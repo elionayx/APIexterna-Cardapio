@@ -1,19 +1,49 @@
 package com.example.mockapi.cardapio_mock_api.model;
 
-import java.math.BigDecimal;
-
 public class ItemSimuladoDTO {
-    public long idExterno;
-    public String nome;
-    public BigDecimal preco;
-    public String descricao;
-    public String categoria;
+    private String nome;
+    private String descricao;
+    private Double preco;
+    private CategoriaItem categoria;
 
-    public ItemSimuladoDTO(long idExterno, String nome, BigDecimal preco, String descricao, String categoria) {
-        this.idExterno = idExterno;
+    public ItemSimuladoDTO() {}
+
+    public ItemSimuladoDTO(String nome, String descricao, Double preco, CategoriaItem categoria) {
         this.nome = nome;
-        this.preco = preco;
         this.descricao = descricao;
+        this.preco = preco;
+        this.categoria = categoria;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public Double getPreco() {
+        return preco;
+    }
+
+    public CategoriaItem getCategoria() {
+        return categoria;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    public void setCategoria(CategoriaItem categoria) {
         this.categoria = categoria;
     }
 }

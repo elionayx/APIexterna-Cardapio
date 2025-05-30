@@ -22,15 +22,4 @@ public class CardapioController {
     public List<ItemSimuladoDTO> listar() {
         return this.cardapioService.listar();
     }
-
-    @PostMapping("/filtrar")
-    public List<ItemSimuladoDTO> filtrar(@RequestBody List<Long> items) {
-        return this.cardapioService.filtrar(items);
-    }
-
-    @GetMapping("/{id}") // Endpoint para buscar item por ID (opcional)
-    public ResponseEntity<ItemSimuladoDTO> recuperar(@PathVariable long id) {
-        ItemSimuladoDTO dado = this.cardapioService.recuperar(id);
-        return ResponseEntity.ok(dado);
-    }
 }
